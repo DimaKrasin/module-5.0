@@ -14,7 +14,7 @@ public class Car {
     private int passngerNow;
     private int speedNow;
     private CarDoor[] carDoors = new CarDoor[5];
-    private CarWheel[] carWheels = new CarWheel[10];
+    private CarWheel[] carWheels = new CarWheel[4];
 
     public Car(int dateOfProduction) {
         this.dateOfProduction = dateOfProduction;
@@ -80,12 +80,13 @@ public class Car {
     }
 
     public void addWheels(int x) {
-        int a = 0;
-        a+=x;
-        for (int i = 0; i < a; i++) {
-            carWheels[i] = new CarWheel();
+        CarWheel[]array = new CarWheel[carWheels.length + x];
+        for(int i = 0; i < array.length; i++){
+            array[i] = array[i] = carWheels[i];
         }
-    }
+
+        }
+
 
     public double maxSpeedNow() {
         double maxSpeedNow;
