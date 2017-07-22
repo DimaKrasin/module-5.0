@@ -51,14 +51,14 @@ public class Car {
             passngerNow = 0;
         }
     }
-    public boolean getDoorFromIndex(int index) {
+    public void getDoorFromIndex(int index) {
         boolean x = true;
         for (int i = 0; i < carDoors.length; i++) {
             if (index == i) {
                 x = carDoors[i].getDoor();
             }
         }
-        return x;
+        System.out.println("Состояние двери = " + x);
     }
 
     public void getWheelFromIndex(int index) {
@@ -80,11 +80,8 @@ public class Car {
     }
 
     public void addWheels(int x) {
-        CarWheel[]array = new CarWheel[carWheels.length + x];
-        for(int i = 0; i < array.length; i++){
-            array[i] = array[i] = carWheels[i];
-        }
-
+        CarWheel[]newWheel = new CarWheel[carWheels.length + x];
+        System.arraycopy(carWheels,0,newWheel,0,carWheels.length - 1);
         }
 
 

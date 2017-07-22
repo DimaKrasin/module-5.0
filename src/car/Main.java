@@ -84,7 +84,7 @@ public class Main {
                     case 13:
                         System.out.println("Введите номер двери");
                         argument = sc.nextInt();
-                        System.out.println(car.getDoorFromIndex(argument));
+                        car.getDoorFromIndex(argument);
                         break;
                     case 14:
                         argument = sc.nextInt();
