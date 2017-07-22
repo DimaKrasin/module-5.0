@@ -20,14 +20,14 @@ public class CarDoor {
     public void openDoor() {
         if (door == false) {
             door = true;
-            System.out.println("Дверь открыта");
-        }
+            System.out.println("Открываем дверь");
+        }else System.out.println("Дверь открыта");
     }
     public void closeDoor(){
         if(door){
             door=false;
-            System.out.println("Дверь закрыта");
-        }
+            System.out.println("Закрываем дверь");
+        }else System.out.println("Дверь закрыта");
 
     }
     public void invertDoor(){
@@ -44,13 +44,13 @@ public class CarDoor {
         if(window==false){
             window=true;
             System.out.println("Открываем окно");
-        }
+        }else System.out.println("Окно открыто");
     }
     public void closeWindow(){
         if(window==true){
             window=false;
             System.out.println("Закрывем окно");
-        }
+        }else System.out.println("Окно закрыто");
     }
     public void invertWindow(){
         if(window){
@@ -60,6 +60,12 @@ public class CarDoor {
             window = true;
             System.out.println("Открываем закрытое окно");
         }
+    }
+    public void conditionDoor(){
+        if(getDoor()) System.out.println("Дверь открыта");
+        else System.out.println("Дверь закрыта");
+        if (getWindow()) System.out.println("Окно открыто");
+        else System.out.println("Окно закрыто");
     }
     public boolean getDoor(){
         return door;

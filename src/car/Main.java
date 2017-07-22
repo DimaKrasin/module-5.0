@@ -16,7 +16,7 @@ public class Main {
                 Scanner sc = new Scanner(System.in);
                 System.out.println
                         ("Выберите действие, которое хотели бы поизвести с автомобилем: " + "\n" +
-                                "1.Узнать состояние дверей и окон(true - открыты/false - закрыты)"+ "\n" +
+                                "1.Узнать состояние дверей и окон"+ "\n" +
                                 "2.Открыть дверь "+ "\n" +
                                 "3.Закрыть дверь"+ "\n" +
                                 "4.Открыть окно" + "\n" +
@@ -42,18 +42,19 @@ public class Main {
                 String y = "y";
                 switch (action) {
                     case 1:
-                        carDoor.consoleDoorInfo();
+                        carDoor.conditionDoor();
                         break;
                     case 2:
-                        carDoor.invertDoor();
+                        carDoor.openDoor();
                         break;
                     case 3:
-                        carDoor.invertDoor();
+                        carDoor.closeDoor();
                         break;
                     case 4:
-                        carDoor.invertWindow();
+                        carDoor.openWindow();
+                        break;
                     case 5:
-                        carDoor.invertWindow();
+                        carDoor.closeWindow();
                         break;
                     case 6:
                         carWheel.consoleWheelInfo();
@@ -62,10 +63,12 @@ public class Main {
                         carWheel.changeWheel();
                         break;
                     case 8:
+                        System.out.println("Сотрите шину на число Х:");
                         argument2 = sc.nextDouble();
                         carWheel.earseWheel(argument2);
                         break;
                     case 9:
+                        System.out.println("Введите скорость");
                         argument = sc.nextInt();
                         car.setSpeedNow(argument);
                         break;
@@ -79,8 +82,9 @@ public class Main {
                         car.outAllPass();
                         break;
                     case 13:
+                        System.out.println("Введите номер двери");
                         argument = sc.nextInt();
-                        car.getDoorFromIndex(argument);
+                        System.out.println(car.getDoorFromIndex(argument));
                         break;
                     case 14:
                         argument = sc.nextInt();

@@ -29,14 +29,6 @@ public class Car {
         this.passngerNow = passngerNow;
         this.speedNow = speedNow;
     }
-    public Car(){
-        for(int i = 0; i < carDoors.length; i++){
-            carDoors[i] = new CarDoor();
-        }
-        for(int i = 0; i < carWheels.length; i++){
-            carWheels[i] = new CarWheel();
-        }
-    }
 
     public void putPass() {
         if (passngerNow > 0 && passngerNow < maxPassenger) {
@@ -111,8 +103,8 @@ public class Car {
         return maxSpeedNow;
     }
 
-    public void setPassngerNow(int passngerNow) {
-        this.passngerNow = passngerNow;
+    public void setPassngerNow(int passnger) {
+        this.passngerNow = passnger;
     }
 
     public int getPassngerNow() {

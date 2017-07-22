@@ -12,13 +12,8 @@ public class CarWheel {
     public CarWheel(double wheel){
         this.wheel = wheel;
     }
-    public void conditinnWheel(){
-        if(wheel==0){
-            System.out.println("Шина стерта");
-        }if(wheel==1){
-            System.out.println("Шина новая");
-        }
-    }
+
+
     public double changeWheel(){
         if(wheel >=0 && wheel <= 1);
             return 1;
