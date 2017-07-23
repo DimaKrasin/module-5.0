@@ -60,6 +60,7 @@ public class Main {
                         carWheel.consoleWheelInfo();
                         break;
                     case 7:
+                        System.out.println("Вы поставили новое колесо");
                         carWheel.changeWheel();
                         break;
                     case 8:
@@ -87,6 +88,7 @@ public class Main {
                         car.getDoorFromIndex(argument);
                         break;
                     case 14:
+                        System.out.println("Введите номер колеса");
                         argument = sc.nextInt();
                         car.getWheelFromIndex(argument);
                         break;
@@ -99,7 +101,7 @@ public class Main {
                         car.addWheels(argument);
                         break;
                     case 17:
-                        car.maxSpeedNow();
+                        System.out.println("Максимальная скорость автомобиля = " + car.maxSpeedNow());
                         break;
                     case 18:
                         car.consoleCarInfo();

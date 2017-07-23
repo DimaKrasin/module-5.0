@@ -54,6 +54,7 @@ public class Car {
     public void getDoorFromIndex(int index) {
         boolean x = true;
         for (int i = 0; i < carDoors.length; i++) {
+            carDoors[i] = new CarDoor();
             if (index == i) {
                 x = carDoors[i].getDoor();
             }
@@ -87,6 +88,9 @@ public class Car {
 
     public double maxSpeedNow() {
         double maxSpeedNow;
+        for(int i = 0; i < carWheels.length; i++){
+            carWheels[i] = new CarWheel();
+        }
         double maxEarse = carWheels[0].getWheel();
         if (passngerNow == 0) maxSpeedNow = 0;
         else {
