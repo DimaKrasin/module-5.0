@@ -33,6 +33,7 @@ public class Car {
     public void putPass() {
         if (passngerNow > 0 && passngerNow < maxPassenger) {
             passngerNow++;
+            System.out.println("Вы посадили одного пассажира");
         } else {
             System.out.println("В машине нет места для пассажиров");
         }
@@ -41,6 +42,7 @@ public class Car {
     public void outPass() {
         if (passngerNow > 0 && passngerNow <= maxPassenger) {
             passngerNow--;
+            System.out.println("Вы высадили одного пассажира");
         } else {
             System.out.println("В машине нет пассажиров");
         }

@@ -80,6 +80,7 @@ public class Main {
                         car.outPass();
                         break;
                     case 12:
+                        System.out.println("Все пассажиры вышли");
                         car.outAllPass();
                         break;
                     case 13:
@@ -93,6 +94,7 @@ public class Main {
                         car.getWheelFromIndex(argument);
                         break;
                     case 15:
+                        System.out.println("Все колеса сняты");
                         car.takeOffAllWheels();
                         break;
                     case 16:
