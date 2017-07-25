@@ -19,10 +19,14 @@ public class CarWheel {
             return 1;
     }
     public double earseWheel(double x){
-        if(x > 100){
+        if(x > 100 || x < 0){
             System.out.println("Вы ввели неверное число");
         }
-        return wheel = wheel - x/100;
+        else wheel -= x/100;
+        if (wheel <= 0){
+            System.out.println("Вы спалили колесо, нужно ставить новое");
+            wheel = 1;
+        }return  wheel;
     }
 
     public double getWheel() {
