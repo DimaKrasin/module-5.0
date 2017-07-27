@@ -68,7 +68,6 @@ public class Car {
         double x = 0;
             for(int i = 0; i < carWheels.length; i++){
                 carWheels[i] = new CarWheel();
-
             if (index == i) {
                 x = carWheels[i].getWheel();
             }

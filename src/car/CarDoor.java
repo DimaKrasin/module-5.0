@@ -6,15 +6,16 @@ import com.sun.org.apache.xpath.internal.SourceTree;
  * Created by 1 on 19.07.2017.
  */
 public class CarDoor {
-    private boolean door = false;
-    private boolean window = false;
+    private boolean door;
+    private boolean window;
 
-    CarDoor(){
-
+    public CarDoor (){
+        this.door = false;
+        this.window = false;
     }
-    public CarDoor (boolean door, boolean window){
-        this.door = door;
-        this.window = window;
+    CarDoor(boolean door, boolean window){
+        this.door = false;
+        this.window = false;
     }
 
     public void openDoor() {
@@ -47,7 +48,7 @@ public class CarDoor {
         }else System.out.println("Окно открыто");
     }
     public void closeWindow(){
-        if(window==true){
+        if(window){
             window=false;
             System.out.println("Закрывем окно");
         }else System.out.println("Окно закрыто");
